@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col bg-slate-100">
       <TopNav/>
-      <Card className="flex flex-col mx-auto lg:w-4/6">
+      <Card className="flex flex-col mx-auto w-full lg:w-4/6">
         <CardHeader>
           <CardTitle>Peringkat Nasional SKD Sekolah Kedinasan</CardTitle>
           <CardDescription>Institut Pemerintahan Dalam Negeri (IPDN)</CardDescription>
