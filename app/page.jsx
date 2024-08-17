@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import {
   Table,
@@ -17,14 +18,17 @@ import {
 } from "@/components/ui/card"
 import { badgeVariants } from "@/components/ui/badge"
 import { TopNav } from "@/components/nav";
+import { useContext } from "react";
+import { userContext } from "./contexProvider";
 
 
 
 export default function Home() {
+  const {user, setUser} = useContext(userContext)
   return (
-    <main className="min-h-screen flex flex-col bg-slate-100">
+    <main className="min-h-screen flex flex-col">
       <TopNav/>
-      <Card className="flex flex-col mx-auto w-full lg:w-4/6">
+      <Card className="flex flex-col mx-auto w-full lg:w-4/6 lg:mt-4">
         <CardHeader>
           <CardTitle>Peringkat Nasional SKD Sekolah Kedinasan</CardTitle>
           <CardDescription>Institut Pemerintahan Dalam Negeri (IPDN)</CardDescription>
@@ -72,11 +76,6 @@ export default function Home() {
           </Table>
         </CardContent>
       </Card>
-      {/* <div className="flex flex-col mx-auto lg:w-4/6">
-        <h1 className="text-2xl font-semibold text-foreground"></h1>
-        <h2 className="font-medium text-foreground"></h2>
-        
-      </div> */}
     </main>
   );
 }
